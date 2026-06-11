@@ -122,200 +122,176 @@
                 illustrant mes compétences en administration systèmes et réseaux.
             </p>
 
-            <div class="design-grid">
-
-                <!-- Mission 1 - Exemple -->
-                <a href="../css/images/pdf/Mission_E5/Mission1_E5_Nils_Hamitouche.pdf" target="_blank" style="
-                    display: flex;
-                    flex-direction: column;
-                    padding: 30px;
-                    background: rgba(0, 212, 255, 0.05);
-                    border: 1px solid rgba(0, 212, 255, 0.3);
-                    border-radius: 16px;
-                    text-decoration: none;
-                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                    position: relative;
-                    overflow: hidden;"
-                    class="mission-card">
-                    
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                        <div style="
-                            width: 40px; height: 40px; border-radius: 10px;
-                            background: rgba(0, 212, 255, 0.1);
-                            border: 1px solid rgba(0, 212, 255, 0.3);
-                            display: flex; align-items: center; justify-content: center;
-                            font-size: 1.2rem; flex-shrink: 0;">
-                            📄
-                        </div>
-                        <h3 style="
+            <div style="display: flex; justify-content: center;">
+                <div style="position: relative; display: inline-block;">
+                    <button id="dropdown-btn" style="
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 12px;
+                        padding: 30px 40px;
+                        background: rgba(0, 212, 255, 0.05);
+                        border: 1px solid rgba(0, 212, 255, 0.3);
+                        border-radius: 16px;
+                        text-decoration: none;
+                        cursor: pointer;
+                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                        min-width: 220px;
+                        position: relative;
+                        overflow: visible;
+                        color: var(--text);
+                        font-family: inherit;">
+                        <span style="font-size: 2rem;">📋</span>
+                        <span style="
                             font-family: 'Montserrat', sans-serif;
                             font-weight: 700;
-                            font-size: 1.1rem;
-                            color: var(--text);
-                            margin: 0;">
-                            Mission 1
-                        </h3>
-                    </div>
-
-                    <p style="
-                        color: var(--gray);
-                        font-size: 0.9rem;
-                        line-height: 1.6;
-                        margin-bottom: 20px;">
-                        Refonte de l'infrastructure réseau de l'entreprise et amélioration de la sécurité des accès.
-                    </p>
-
-                    <div style="
-                        display: flex;
-                        align-items: center;
-                        gap: 8px;
-                        color: var(--primary);
-                        font-size: 0.85rem;
-                        font-weight: 600;
-                        margin-top: auto;">
-                        <span>Voir le PDF</span>
-                        <span>→</span>
-                    </div>
-
-                    <div style="
-                        position: absolute;
-                        bottom: 0; left: 0;
-                        width: 100%; height: 3px;
-                        background: linear-gradient(90deg, transparent, var(--primary), transparent);
-                        opacity: 0;
-                        transition: opacity 0.3s ease;"
-                        class="mission-underline">
-                    </div>
-                </a>
-
-                <!-- Mission 2 - Exemple -->
-                <a href="E5/mission_2.pdf" target="_blank" style="
-                    display: flex;
-                    flex-direction: column;
-                    padding: 30px;
-                    background: rgba(0, 212, 255, 0.05);
-                    border: 1px solid rgba(0, 212, 255, 0.3);
-                    border-radius: 16px;
-                    text-decoration: none;
-                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                    position: relative;
-                    overflow: hidden;"
-                    class="mission-card">
-                    
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                            font-size: 0.85rem;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            color: var(--primary);">
+                            Mes Missions E5
+                        </span>
+                        <span style="
+                            font-size: 0.78rem;
+                            color: var(--gray);
+                            font-weight: 300;">
+                            Sélectionner une mission ▼
+                        </span>
                         <div style="
-                            width: 40px; height: 40px; border-radius: 10px;
-                            background: rgba(0, 212, 255, 0.1);
-                            border: 1px solid rgba(0, 212, 255, 0.3);
-                            display: flex; align-items: center; justify-content: center;
-                            font-size: 1.2rem; flex-shrink: 0;">
-                            📄
+                            position: absolute;
+                            bottom: 0; left: 0;
+                            width: 100%; height: 3px;
+                            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+                            opacity: 0;
+                            transition: opacity 0.3s ease;"
+                            class="btn-underline">
                         </div>
-                        <h3 style="
-                            font-family: 'Montserrat', sans-serif;
-                            font-weight: 700;
-                            font-size: 1.1rem;
-                            color: var(--text);
-                            margin: 0;">
-                            Mission 2
-                        </h3>
-                    </div>
+                    </button>
 
-                    <p style="
-                        color: var(--gray);
-                        font-size: 0.9rem;
-                        line-height: 1.6;
-                        margin-bottom: 20px;">
-                        A venir.
-                    </p>
-
-                    <div style="
-                        display: flex;
-                        align-items: center;
-                        gap: 8px;
-                        color: var(--primary);
-                        font-size: 0.85rem;
-                        font-weight: 600;
-                        margin-top: auto;">
-                        <span>Voir le PDF</span>
-                        <span>→</span>
-                    </div>
-
-                    <div style="
+                    <!-- Dropdown Menu -->
+                    <div id="dropdown-menu" style="
+                        display: none;
                         position: absolute;
-                        bottom: 0; left: 0;
-                        width: 100%; height: 3px;
-                        background: linear-gradient(90deg, transparent, var(--primary), transparent);
-                        opacity: 0;
-                        transition: opacity 0.3s ease;"
-                        class="mission-underline">
-                    </div>
-                </a>
+                        background-color: rgba(20, 20, 30, 0.95);
+                        backdrop-filter: blur(10px);
+                        min-width: 320px;
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                        border: 1px solid rgba(0, 212, 255, 0.3);
+                        border-radius: 12px;
+                        z-index: 1000;
+                        top: 100%;
+                        left: 0;
+                        margin-top: 10px;
+                        overflow: hidden;">
 
-                <!-- Mission 3 - Exemple -->
-                <a href="E5/mission_3.pdf" target="_blank" style="
-                    display: flex;
-                    flex-direction: column;
-                    padding: 30px;
-                    background: rgba(0, 212, 255, 0.05);
-                    border: 1px solid rgba(0, 212, 255, 0.3);
-                    border-radius: 16px;
-                    text-decoration: none;
-                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                    position: relative;
-                    overflow: hidden;"
-                    class="mission-card">
-                    
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                        <div style="
-                            width: 40px; height: 40px; border-radius: 10px;
-                            background: rgba(0, 212, 255, 0.1);
-                            border: 1px solid rgba(0, 212, 255, 0.3);
-                            display: flex; align-items: center; justify-content: center;
-                            font-size: 1.2rem; flex-shrink: 0;">
-                            📄
-                        </div>
-                        <h3 style="
-                            font-family: 'Montserrat', sans-serif;
-                            font-weight: 700;
-                            font-size: 1.1rem;
+                        <a href="../css/images/pdf/Mission_E5/Mission1_E5_Nils_Hamitouche.pdf" target="_blank" style="
                             color: var(--text);
-                            margin: 0;">
-                            Mission 3
-                        </h3>
+                            padding: 15px 20px;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                            transition: all 0.3s ease;
+                            border-bottom: 1px solid rgba(0, 212, 255, 0.1);">
+                            <span style="font-size: 1.2rem;">📄</span>
+                            <div>
+                                <div style="
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-weight: 600;
+                                    font-size: 0.9rem;
+                                    color: var(--primary);">
+                                    Mission 1
+                                </div>
+                                <div style="
+                                    font-size: 0.75rem;
+                                    color: var(--gray);
+                                    margin-top: 3px;">
+                                    Refonte infrastructure réseau
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="E5/mission_2.pdf" target="_blank" style="
+                            color: var(--text);
+                            padding: 15px 20px;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                            transition: all 0.3s ease;
+                            border-bottom: 1px solid rgba(0, 212, 255, 0.1);">
+                            <span style="font-size: 1.2rem;">📄</span>
+                            <div>
+                                <div style="
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-weight: 600;
+                                    font-size: 0.9rem;
+                                    color: var(--primary);">
+                                    Mission 2
+                                </div>
+                                <div style="
+                                    font-size: 0.75rem;
+                                    color: var(--gray);
+                                    margin-top: 3px;">
+                                    À venir
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="E5/mission_3.pdf" target="_blank" style="
+                            color: var(--text);
+                            padding: 15px 20px;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                            transition: all 0.3s ease;">
+                            <span style="font-size: 1.2rem;">📄</span>
+                            <div>
+                                <div style="
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-weight: 600;
+                                    font-size: 0.9rem;
+                                    color: var(--primary);">
+                                    Mission 3
+                                </div>
+                                <div style="
+                                    font-size: 0.75rem;
+                                    color: var(--gray);
+                                    margin-top: 3px;">
+                                    À venir
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="E5/mission_4.pdf" target="_blank" style="
+                            color: var(--text);
+                            padding: 15px 20px;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                            transition: all 0.3s ease;
+                            border-bottom: 1px solid rgba(0, 212, 255, 0.1);">
+                            <span style="font-size: 1.2rem;">📄</span>
+                            <div>
+                                <div style="
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-weight: 600;
+                                    font-size: 0.9rem;
+                                    color: var(--primary);">
+                                    Mission 4
+                                </div>
+                                <div style="
+                                    font-size: 0.75rem;
+                                    color: var(--gray);
+                                    margin-top: 3px;">
+                                    À venir
+                                </div>
+                            </div>
+                        </a>
                     </div>
-
-                    <p style="
-                        color: var(--gray);
-                        font-size: 0.9rem;
-                        line-height: 1.6;
-                        margin-bottom: 20px;">
-                        A venir.
-                    </p>
-
-                    <div style="
-                        display: flex;
-                        align-items: center;
-                        gap: 8px;
-                        color: var(--primary);
-                        font-size: 0.85rem;
-                        font-weight: 600;
-                        margin-top: auto;">
-                        <span>Voir le PDF</span>
-                        <span>→</span>
-                    </div>
-
-                    <div style="
-                        position: absolute;
-                        bottom: 0; left: 0;
-                        width: 100%; height: 3px;
-                        background: linear-gradient(90deg, transparent, var(--primary), transparent);
-                        opacity: 0;
-                        transition: opacity 0.3s ease;"
-                        class="mission-underline">
-                    </div>
-                </a>
-
+                </div>
             </div>
         </section>
 
@@ -324,25 +300,71 @@
     <canvas id="canvas-particles"></canvas>
     <script src="../js/script.js"></script>
 
-    <!-- Hover effect sur les cartes de missions -->
+    <!-- Dropdown menu script -->
     <script>
-        document.querySelectorAll('.mission-card').forEach(card => {
-            const underline = card.querySelector('.mission-underline');
-            
-            card.addEventListener('mouseenter', () => {
-                card.style.background = 'rgba(0, 212, 255, 0.10)';
-                card.style.borderColor = 'rgba(0, 212, 255, 0.7)';
-                card.style.transform = 'translateY(-5px)';
-                card.style.boxShadow = '0 15px 35px rgba(0,0,0,0.4), 0 0 25px rgba(0, 212, 255, 0.2)';
-                if (underline) underline.style.opacity = '1';
+        const dropdownBtn = document.getElementById('dropdown-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const btnUnderline = dropdownBtn.querySelector('.btn-underline');
+
+        // Toggle dropdown
+        dropdownBtn.addEventListener('click', () => {
+            if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+                dropdownMenu.style.display = 'block';
+                dropdownBtn.style.background = 'rgba(0, 212, 255, 0.10)';
+                dropdownBtn.style.borderColor = 'rgba(0, 212, 255, 0.7)';
+                dropdownBtn.style.borderBottomLeftRadius = '0';
+                dropdownBtn.style.borderBottomRightRadius = '0';
+                btnUnderline.style.opacity = '1';
+            } else {
+                dropdownMenu.style.display = 'none';
+                dropdownBtn.style.background = 'rgba(0, 212, 255, 0.05)';
+                dropdownBtn.style.borderColor = 'rgba(0, 212, 255, 0.3)';
+                dropdownBtn.style.borderRadius = '16px';
+                btnUnderline.style.opacity = '0';
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('[style*="position: relative"]')) {
+                dropdownMenu.style.display = 'none';
+                dropdownBtn.style.background = 'rgba(0, 212, 255, 0.05)';
+                dropdownBtn.style.borderColor = 'rgba(0, 212, 255, 0.3)';
+                dropdownBtn.style.borderRadius = '16px';
+                btnUnderline.style.opacity = '0';
+            }
+        });
+
+        // Hover effect on button
+        dropdownBtn.addEventListener('mouseenter', () => {
+            if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+                dropdownBtn.style.background = 'rgba(0, 212, 255, 0.10)';
+                dropdownBtn.style.borderColor = 'rgba(0, 212, 255, 0.7)';
+                dropdownBtn.style.transform = 'translateY(-5px)';
+                dropdownBtn.style.boxShadow = '0 15px 35px rgba(0,0,0,0.4), 0 0 25px rgba(0, 212, 255, 0.2)';
+                btnUnderline.style.opacity = '1';
+            }
+        });
+
+        dropdownBtn.addEventListener('mouseleave', () => {
+            if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+                dropdownBtn.style.background = 'rgba(0, 212, 255, 0.05)';
+                dropdownBtn.style.borderColor = 'rgba(0, 212, 255, 0.3)';
+                dropdownBtn.style.transform = 'translateY(0)';
+                dropdownBtn.style.boxShadow = 'none';
+                btnUnderline.style.opacity = '0';
+            }
+        });
+
+        // Hover effect on dropdown items
+        document.querySelectorAll('#dropdown-menu > a').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.background = 'rgba(0, 212, 255, 0.1)';
+                item.style.paddingLeft = '25px';
             });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.background = 'rgba(0, 212, 255, 0.05)';
-                card.style.borderColor = 'rgba(0, 212, 255, 0.3)';
-                card.style.transform = 'translateY(0)';
-                card.style.boxShadow = 'none';
-                if (underline) underline.style.opacity = '0';
+            item.addEventListener('mouseleave', () => {
+                item.style.background = 'transparent';
+                item.style.paddingLeft = '20px';
             });
         });
     </script>
